@@ -21,6 +21,7 @@ class Nav extends Component {
       <div id="navbar">
         <Link to={{ pathname: '/1' }}> Naloga 1</Link>
         <Link to={{ pathname: '/2' }}> Naloga 2</Link>
+        <Link to={{ pathname: '/3' }}> Naloga 3</Link>
       </div>
     )
   }
