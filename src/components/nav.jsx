@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
 
 class Nav extends Component {
   constructor(props) {
@@ -18,12 +19,8 @@ class Nav extends Component {
   render() {
     return (
       <div id="navbar">
-        <a href="#">Naloga 1</a>
-        <a href="#">Naloga 2</a>
-        <a href="#">Naloga 3</a>
-        <a href="#">Naloga 4</a>
-        <a href="#">Naloga 5</a>
-        <a href="#">Naloga 6</a>
+        <Link to={{ pathname: '/1' }}> Naloga 1</Link>
+        <Link to={{ pathname: '/2' }}> Naloga 2</Link>
       </div>
     )
   }
