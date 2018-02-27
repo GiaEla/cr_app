@@ -8,6 +8,7 @@ import Nal2 from './components/nal2';
 import Nal3 from './components/nal3';
 import Nal4 from './components/nal4';
 import Nal5 from './components/nal5';
+import Nal6 from './components/nal6';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path="/3" component={Nal3} />
             <Route path="/4" component={Nal4} />
             <Route path="/5" component={Nal5} />
+            <Route path="/6" component={Nal6} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -20,7 +20,26 @@
 .numbers div {
   padding: 10px;
   border: 1px gray solid;
-  width: 50px;
+  width: 75px;
   margin: auto;
   text-align: center;
+}
+
+.mega-menu-opened{
+  display: block;
+  position: absolute;
+  background-color: blue;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  height: 90vh;
+}
+
+.mega-menu-closed {
+  display: none;
+}
+
+.test {
+  height: 200vh;
 }
