@@ -20,14 +20,14 @@ class Nal6 extends Component {
       { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
       { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
     ] };
-    this.handleWaypointLeave = this.handleWaypointLeave.bind(this);
+
     this.fetchFromServer = this.fetchFromServer.bind(this);
   }
   componentDidMount() {
     this.fetchFromServer();
   }
 
-  fetchFromServer(path) {
+  fetchFromServer() {
 
     const response = [
       { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
