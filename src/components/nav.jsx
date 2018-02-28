@@ -8,28 +8,31 @@ class Nav extends Component {
     this.state = { menuIsExpanded: false };
   }
 
-  handleMouseEnter() {
+  handleExpand() {
     this.setState({ menuIsExpanded: true });
   }
 
-  handleMouseLeave() {
+  handleShrink() {
     this.setState({ menuIsExpanded: false });
   }
 
   render() {
     return (
-      <div onMouseLeave={() => this.handleMouseLeave()}>
-        <div className='navbar-fixed'>
-          <Navbar onClick={() => this.handleMouseLeave()}>
-            <NavItem href='/1' onMouseEnter={() => this.handleMouseLeave()}>Naloga 1</NavItem>
-            <NavItem href='/2' onMouseEnter={() => this.handleMouseLeave()}>Naloga 2</NavItem>
-            <NavItem href='/3' onMouseEnter={() => this.handleMouseLeave()}>Naloga 3</NavItem>
-            <NavItem href='/4' onMouseEnter={() => this.handleMouseLeave()}>Naloga 4</NavItem>
-            <NavItem href='/5' onMouseEnter={() => this.handleMouseLeave()}>Naloga 5</NavItem>
-            <NavItem href='/6' onMouseEnter={() => this.handleMouseEnter()}>Naloga 6</NavItem>
+      <div onMouseLeave={() => this.handleShrink()}>
+        <div className="navbar-fixed">
+          <Navbar onClick={() => this.handleShrink()}>
+            <NavItem href="/1" onMouseEnter={() => this.handleShrink()}>Naloga 1</NavItem>
+            <NavItem href="/2" onMouseEnter={() => this.handleShrink()}>Naloga 2</NavItem>
+            <NavItem href="/3" onMouseEnter={() => this.handleShrink()}>Naloga 3</NavItem>
+            <NavItem href="/4" onMouseEnter={() => this.handleShrink()}>Naloga 4</NavItem>
+            <NavItem href="/5" onMouseEnter={() => this.handleShrink()}>Naloga 5</NavItem>
+            <NavItem href="/6" onMouseEnter={() => this.handleExpand()}>Naloga 6</NavItem>
           </Navbar>
-          </div>
+        </div>
         <div className={this.state.menuIsExpanded ? 'mega-menu-opened' : 'mega-menu-closed'}>
+          <button waves="light" onClick={() => this.handleShrink()} className="right">
+            <i className="medium material-icons">close</i>
+          </button>
           <Row>
             <Col s={12} m={4}>
               <h3>Group 1</h3>

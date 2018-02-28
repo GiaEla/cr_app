@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { Button, Carousel, Row, Slide, Slider } from 'react-materialize';
+import { Button, Row, Slide, Slider } from 'react-materialize';
 import fetchMock from 'fetch-mock';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 import Thumbnail from './thumbnails';
+import Img1 from '../images/img1.jpg';
+import Img2 from '../images/img2.jpg';
+import Img3 from '../images/img3.jpg';
 
 class Nal6 extends Component {
   constructor(props) {
@@ -11,14 +14,14 @@ class Nal6 extends Component {
 
     this.state = {
       products: [
-        { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-        { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-        { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-        { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-        { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-        { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-        { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-        { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
+        { name: 'Hello', desc: 'Desc', img: Img1 },
+        { name: 'Hello', desc: 'Desc', img: Img1 },
+        { name: 'Hello', desc: 'Desc', img: Img1 },
+        { name: 'Hello', desc: 'Desc', img: Img1 },
+        { name: 'Hello', desc: 'Desc', img: Img1 },
+        { name: 'Hello', desc: 'Desc', img: Img1 },
+        { name: 'Hello', desc: 'Desc', img: Img1 },
+        { name: 'Hello', desc: 'Desc', img: Img1 },
       ],
       filtered: false
     };
@@ -35,10 +38,10 @@ class Nal6 extends Component {
 
   fetchFromServer() {
     const response = [
-      { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-      { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-      { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
-      { name: 'Hello', desc: 'Desc', img: '/static/img1.jpg' },
+      { name: 'Hello', desc: 'Desc', img: Img1 },
+      { name: 'Hello', desc: 'Desc', img: Img1 },
+      { name: 'Hello', desc: 'Desc', img: Img1 },
+      { name: 'Hello', desc: 'Desc', img: Img1 }
     ];
 
 
@@ -55,10 +58,10 @@ class Nal6 extends Component {
 
   handleFilterClick() {
     const response = [
-      { name: 'Filter', desc: 'Desc', img: '/static/img1.jpg' },
-      { name: 'Filter', desc: 'Desc', img: '/static/img1.jpg' },
-      { name: 'Filter', desc: 'Desc', img: '/static/img1.jpg' },
-      { name: 'Filter', desc: 'Desc', img: '/static/img1.jpg' },
+      { name: 'Filter', desc: 'Desc', img: Img1 },
+      { name: 'Filter', desc: 'Desc', img: Img1 },
+      { name: 'Filter', desc: 'Desc', img: Img1 },
+      { name: 'Filter', desc: 'Desc', img: Img1 }
     ];
 
 
@@ -85,21 +88,21 @@ class Nal6 extends Component {
       <div className="container under-nav">
         <Slider className="costum-slider">
           <Slide
-            src="http://lorempixel.com/580/250/nature/1"
-            title="This is our big Tagline!"
+            src={Img1}
+            title="Something"
           >
             Something
           </Slide>
           <Slide
-            src="http://lorempixel.com/580/250/nature/2"
-            title="Left aligned Caption"
+            src={Img2}
+            title="Something left"
             placement="left"
           >
             Something else
           </Slide>
           <Slide
-            src="http://lorempixel.com/580/250/nature/3"
-            title="Right aligned Caption"
+            src={Img3}
+            title="Something right"
             placement="right"
           >
             And yet something else
